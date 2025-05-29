@@ -7,36 +7,56 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      padding: 2rem;
-      max-width: 500px;
-      margin: auto;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
     }
-    h1 {
-      color: #4CAF50;
+    header {
+      background-color: #4CAF50;
+      padding: 1rem;
+      text-align: center;
+      color: white;
+    }
+    nav {
+      background-color: #e0e0e0;
+      padding: 0.5rem 1rem;
       text-align: center;
     }
-    .checker-container {
-      background: white;
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #333;
+    }
+    nav a:hover {
+      color: #4CAF50;
+    }
+    .container {
+      max-width: 500px;
+      margin: 2rem auto;
+      background-color: #fff;
       padding: 2rem;
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
+    h2 {
+      text-align: center;
+      color: #4CAF50;
+    }
     input[type="text"] {
       width: 100%;
-      padding: 0.7rem;
-      margin-bottom: 1rem;
+      padding: 0.75rem;
       font-size: 1rem;
+      margin-bottom: 1rem;
       border: 1px solid #ccc;
       border-radius: 5px;
-      box-sizing: border-box;
     }
     button {
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
       background-color: #4CAF50;
       color: white;
       border: none;
-      padding: 0.7rem 1.5rem;
-      font-size: 1rem;
       border-radius: 5px;
       cursor: pointer;
       margin-right: 1rem;
@@ -46,39 +66,33 @@
     }
     #result {
       margin-top: 1rem;
+      text-align: center;
       font-weight: bold;
-      font-size: 1.1rem;
       color: #333;
       min-height: 1.5em;
-      text-align: center;
-    }
-    a.back-link {
-      display: block;
-      margin-top: 2rem;
-      text-align: center;
-      color: #4CAF50;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    a.back-link:hover {
-      text-decoration: underline;
     }
   </style>
 </head>
 <body>
 
-  <h1>Uppercase / Lowercase Checker</h1>
+  <header>
+    <h1>Uppercase / Lowercase Checker</h1>
+  </header>
 
-  <div class="checker-container">
-    <input type="text" id="textInput" placeholder="Type text here..." />
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+  </nav>
+
+  <div class="container">
+    <h2>Check Your Text</h2>
+    <input type="text" id="textInput" placeholder="Type something..." />
     <div>
       <button onclick="checkCase()">Check</button>
       <button onclick="clearInput()">Clear</button>
     </div>
     <p id="result"></p>
   </div>
-
-  <a href="index.html" class="back-link">← Back to Home</a>
 
   <script>
     function checkCase() {
@@ -94,13 +108,13 @@
       const lettersOnly = input.replace(/[^a-zA-Z]/g, '');
 
       if (lettersOnly.length === 0) {
-        result.textContent = 'Input has no letters to check.';
+        result.textContent = 'No alphabetic characters found.';
         result.style.color = 'orange';
         return;
       }
 
       if (lettersOnly === lettersOnly.toUpperCase()) {
-        result.textContent = 'All letters are uppercase.';
+        result.textContent = 'All letters are UPPERCASE.';
         result.style.color = 'green';
       } else if (lettersOnly === lettersOnly.toLowerCase()) {
         result.textContent = 'All letters are lowercase.';
