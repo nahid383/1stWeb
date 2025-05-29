@@ -7,14 +7,45 @@
   <style>
     body {
       font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #4CAF50;
+      padding: 1rem;
+      text-align: center;
+    }
+    header h1 {
+      color: white;
+      margin: 0;
+    }
+    nav {
+      background-color: #333;
+      display: flex;
+      justify-content: center;
+      padding: 0.5rem 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1.5rem;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .active {
+      text-decoration: underline;
+      color: #4CAF50;
+      background-color: white;
+      padding: 0.3rem 0.8rem;
+      border-radius: 4px;
+    }
+    .container {
       max-width: 800px;
       margin: auto;
       padding: 2rem;
-      background-color: #f9f9f9;
-    }
-    h1 {
-      text-align: center;
-      color: #4CAF50;
     }
     .team-info {
       text-align: center;
@@ -49,55 +80,43 @@
       color: #666;
       margin-top: 0.25rem;
     }
-    .back-button {
-      display: block;
-      text-align: center;
-      margin-top: 2rem;
-    }
-    .back-button a {
-      display: inline-block;
-      background-color: #4CAF50;
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 6px;
-      font-size: 1rem;
-      font-weight: bold;
-    }
-    .back-button a:hover {
-      background-color: #45a049;
-    }
   </style>
 </head>
 <body>
 
-  <h1>About CodeTriplet</h1>
+  <header>
+    <h1>About CodeTriplet</h1>
+  </header>
 
-  <div class="team-info">
-    <p>Our Team Name: <strong>CodeTriplet</strong></p>
-    <p>We are studying at SUST, Software Engineering, Batch 23</p>
-  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="checker.html">Checker</a>
+    <a href="about.html" class="active">About</a>
+  </nav>
 
-  <div class="photos">
-    <div>
-      <img src="nahid.jpg" alt="Nahid Hasan" />
-      <div class="caption">Nahid Hasan</div>
-      <div class="hometown">(Naogaon)</div>
+  <div class="container">
+    <div class="team-info">
+      <p>Our Team Name: <strong>CodeTriplet</strong></p>
+      <p>We are studying at SUST, Software Engineering, Batch 23</p>
     </div>
-    <div>
-      <img src="ratul.jpg" alt="Nazmul Hasan Ratul" />
-      <div class="caption">Nazmul Hasan Ratul</div>
-      <div class="hometown">(Noakhali)</div>
-    </div>
-    <div>
-      <img src="fuad.jpg" alt="Fuad Intisar" />
-      <div class="caption">Fuad Intisar</div>
-      <div class="hometown">(Chittagong)</div>
-    </div>
-  </div>
 
-  <div class="back-button">
-    <a href="index.html">← Back to Home</a>
+    <div class="photos">
+      <div>
+        <img src="nahid.jpg" alt="Nahid Hasan" />
+        <div class="caption">Nahid Hasan</div>
+        <div class="hometown">(Naogaon)</div>
+      </div>
+      <div>
+        <img src="ratul.jpg" alt="Nazmul Hasan Ratul" />
+        <div class="caption">Nazmul Hasan Ratul</div>
+        <div class="hometown">(Noakhali)</div>
+      </div>
+      <div>
+        <img src="fuad.jpg" alt="Fuad Intisar" />
+        <div class="caption">Fuad Intisar</div>
+        <div class="hometown">(Chittagong)</div>
+      </div>
+    </div>
   </div>
 
 </body>
